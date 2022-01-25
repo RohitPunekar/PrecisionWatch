@@ -14,7 +14,7 @@ public class LandingPage extends base {
 	}
 	
 	By signin = By.xpath("//*[@type='button']");
-	By title = By.xpath("//*[@class='sc-jgaZKu dedhbM']");
+	By title = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/section[1]/div[1]/div[1]/caption");
 	By FAQs = By.xpath("/html/body/div/div/div/div[1]/div[1]/div/ul/li[5]/a");
 	By signup = By.xpath("//*[@href=\"/signup\"]");
 	

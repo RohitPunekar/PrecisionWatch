@@ -41,8 +41,8 @@ public class SignupPageTest extends base {
 		System.out.println("entered mobile number");
 		sp.getMail().sendKeys(prop.getProperty("email"));
 		System.out.println("entered email address");
-//		sp.getWallet().sendKeys(prop.getProperty("wallet"));
-//		System.out.println("entered wallet address");
+		//		sp.getWallet().sendKeys(prop.getProperty("wallet"));
+		//		System.out.println("entered wallet address");
 		sp.getPassword().sendKeys(prop.getProperty("pwd"));
 		System.out.println("entered password");
 		sp.ConfirmPass().sendKeys(prop.getProperty("pwd"));
@@ -50,19 +50,9 @@ public class SignupPageTest extends base {
 		sp.getSubmit().click();
 		System.out.println("clicked on submit button");
 		Thread.sleep(3000);
-		
-		
-	
-//		sp.getotp1().sendKeys(otp1);
-//		sp.getotp2().sendKeys(otp2);
-//		sp.getotp3().sendKeys(otp3);
-//		sp.getotp4().sendKeys(otp4);
-//		System.out.println("otp entered successfully");
-//		sp.getSubmit2().click();
-//		System.out.println("clicked on submit button");
 	}
-	
-	
+
+
 	@Test(priority = 2)
 	public void GetGmailOtp() throws InterruptedException
 	{
@@ -81,19 +71,19 @@ public class SignupPageTest extends base {
 		String heading = gc.GetTxt().getText();
 		if(gc.GetTxt().equals(heading)) 
 		{
-		gc.Getid().click();
+			gc.Getid().click();
 		} 
-    	
-		
+
+
 	}
 
 
-	
+
 	@AfterTest
 	public void teardown()
 	{
 		driver.quit();
 	}
-	 
+
 
 }

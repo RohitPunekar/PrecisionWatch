@@ -26,7 +26,7 @@ public class ValidateTitle extends base{
 	public void Validatetitle() throws IOException 
 	{
 		LandingPage lp = new LandingPage(driver);
-		Assert.assertEquals(lp.getTitle().getText(), "MARKETPLACE INTRODUCTION"); 
+		Assert.assertEquals(lp.getTitle().getText(), "IMMORTALIZE YOUR TIMEPIECE"); 
 		System.out.println("Validated title successfully");
 	}
 

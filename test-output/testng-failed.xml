@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Automation.SignupPageTest">
+      <class name="Automation.ValidateTitle">
         <methods>
-          <include name="GetGmailOtp"/>
           <include name="initialise"/>
           <include name="teardown"/>
+          <include name="Validatetitle"/>
         </methods>
-      </class> <!-- Automation.SignupPageTest -->
+      </class> <!-- Automation.ValidateTitle -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
