@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Automation.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Validating user signup(failed)">
+    <classes>
+      <class name="Automation.SignupPageTest">
+        <methods>
+          <include name="GetGmailOtp"/>
+          <include name="ValidateSignup" invocation-numbers="0"/>
+          <include name="initialise"/>
+        </methods>
+      </class> <!-- Automation.SignupPageTest -->
+    </classes>
+  </test> <!-- Validating user signup(failed) -->
+  <test thread-count="5" name="Validating title in the homepage(failed)">
+    <classes>
+      <class name="Automation.ValidateTitle">
+        <methods>
+          <include name="initialise"/>
+          <include name="teardown"/>
+          <include name="Validatetitle"/>
+        </methods>
+      </class> <!-- Automation.ValidateTitle -->
+    </classes>
+  </test> <!-- Validating title in the homepage(failed) -->
+</suite> <!-- Failed suite [Suite] -->
