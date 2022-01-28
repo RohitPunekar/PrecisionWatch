@@ -22,11 +22,6 @@ public WebDriver driver;
 	By id = By.xpath("//*[@id=':25']");
 	By text = By.xpath("//*[@email='rapidinnovation376@gmail.com']");
 	
-	
-	public void getURL() {
-	driver.get("https://www.google.com/gmail/");
-	}
-	
 	public WebElement GetUsername()
 	{
 		return driver.findElement(uname);

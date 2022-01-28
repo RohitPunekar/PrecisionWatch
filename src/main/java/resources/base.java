@@ -6,9 +6,11 @@ import java.util.ArrayList;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -42,13 +44,17 @@ public class base {
 
 		ChromeOptions options = new ChromeOptions();
 		options.addExtensions(new File(".//Metamask//extension.crx"));
-		Thread.sleep(3000);
 		driver = new ChromeDriver(options);
-		ArrayList<String> newTb = new ArrayList<String>(driver.getWindowHandles());
-		driver.switchTo().window(newTb.get(1));
 		Thread.sleep(3000);
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//*[text()='Get Started']")).click();
+		
+		//		ArrayList<String> newTb = new ArrayList<String>(driver.getWindowHandles());
+		//		driver.switchTo().window(newTb.get(1));
+		//		driver.get(prop.getProperty("url"));
+		//		Thread.sleep(3000);
+		//		driver.switchTo().window(newTb.get(1));
+		//		driver.manage().window().maximize();
+		//		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		return driver;
 	}
 

@@ -18,7 +18,7 @@ public class SignupPage extends base{
 	By uname = By.xpath("//*[@name='name']");
 	By mbl = By.xpath("//*[@name='mobile']");
 	By mail = By.xpath("//*[@name='email']");
-	By wallet = By.xpath("//*[@name='walletAddress']");
+	By wallet = By.xpath("//*[@class='connectWalletButton']");
 	By pass = By.xpath("//*[@name='password']");
 	By cpass = By.xpath("//*[@placeholder='Both passwords must match']");
 	By submit = By.xpath("//*[@type='submit']");

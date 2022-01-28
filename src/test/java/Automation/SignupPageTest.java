@@ -1,7 +1,10 @@
 package Automation;
 import java.io.IOException;
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterTest;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -20,14 +23,10 @@ public class SignupPageTest extends base {
 		System.out.println("TEST2: Signup Page Test");
 	}
 
-	@Test(priority=1)
+	@Test
 	public void ValidateSignup() throws InterruptedException 
 	{
-		//4.Verify user is able to signup
-
-		driver.get(prop.getProperty("url"));
-		System.out.println("URL opened successfully");
-
+		//Verify user is able to signup
 		LandingPage lp = new LandingPage(driver);
 		lp.getLogin().click();
 		System.out.println("clicked on login page button");
@@ -41,49 +40,61 @@ public class SignupPageTest extends base {
 		System.out.println("entered mobile number");
 		sp.getMail().sendKeys(prop.getProperty("email"));
 		System.out.println("entered email address");
-		//		sp.getWallet().sendKeys(prop.getProperty("wallet"));
-		//		System.out.println("entered wallet address");
-		sp.getPassword().sendKeys(prop.getProperty("pwd"));
-		System.out.println("entered password");
-		sp.ConfirmPass().sendKeys(prop.getProperty("pwd"));
-		System.out.println("password confirmed");
-		sp.getSubmit().click();
-		System.out.println("clicked on submit button");
-		Thread.sleep(3000);
+		sp.getWallet().click();
+
+
+//		sp.getPassword().sendKeys(prop.getProperty("pwd"));
+//		System.out.println("entered password");
+//		sp.ConfirmPass().sendKeys(prop.getProperty("pwd"));
+//		System.out.println("password confirmed");
+		
+//		sp.getSubmit().click();
+//		System.out.println("clicked on submit button");
+
+		
+//		gmailCode gc = new gmailCode(driver);
+//		driver.get("https://mail.google.com/mail");
+//		System.out.println("URL opened successfully");
+//		gc.GetUsername().sendKeys("rohitqa20@gmail.com");
+//		System.out.println("Username entered");
+//		gc.GetNext().click();
+//		System.out.println("Clicked on Next button");
+//		Thread.sleep(3000);
+//		gc.GetPass().sendKeys("Rohit@jer435");
+//		System.out.println("Password entered");
+//		gc.GetSubmit().click();
+//		System.out.println("Clicked on submit button");
+//		Thread.sleep(3000);
+//
+//		driver.get("https://mail.google.com/mail/u/0/#inbox/FMfcgzGmtXJFVLpswpTpNvMnScSRVplb");
+//		System.out.println("reading OTP");
+//		Thread.sleep(20000);
+//		List<WebElement> myy11 = driver.findElements(By.cssSelector("[id] div p:nth-child(2)"));
+//		// System.out.println("List "+ my.size());
+//		for (WebElement amm : myy11)
+//		{
+//			String name111 = amm.getText();
+//			System.out.println("==========" + name111);
+//			char a = name111.charAt(0);
+//			System.out.println("first number =" + a);
+//			char b = name111.charAt(1);
+//			System.out.println("Second number =" + b);
+//			char c = name111.charAt(2);
+//			System.out.println("Third number =" + c);
+//			char d = name111.charAt(3);
+//			System.out.println("Fourth number =" + d);
+
 	}
 
 
-	@Test(priority = 2)
-	public void GetGmailOtp() throws InterruptedException
-	{
-		gmailCode gc = new gmailCode(driver);
-		gc.getURL();
-		System.out.println("URL opened successfully");
-		gc.GetUsername().sendKeys(prop.getProperty("email"));
-		System.out.println("Username entered");
-		gc.GetNext().click();
-		System.out.println("Clicked on Next button");
-		Thread.sleep(5000);
-		gc.GetPass().sendKeys(prop.getProperty("password"));
-		System.out.println("Password entered");
-		gc.GetSubmit().click();
-		System.out.println("Clicked on submit button");
-		String heading = gc.GetTxt().getText();
-		if(gc.GetTxt().equals(heading)) 
-		{
-			gc.Getid().click();
-		} 
-
-
-	}
 
 
 
-	@AfterTest
-	public void teardown()
-	{
-		driver.quit();
-	}
+//		@AfterTest
+//		public void teardown()
+//		{
+//			driver.quit();
+//		}
 
 
 }
