@@ -4,24 +4,45 @@
   <listeners>
     <listener class-name="Automation.Listeners"/>
   </listeners>
+  <test thread-count="5" name="Validating user login(failed)">
+    <classes>
+      <class name="Automation.homepage">
+        <methods>
+          <include name="ValidateLogin"/>
+          <include name="initialise"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- Automation.homepage -->
+    </classes>
+  </test> <!-- Validating user login(failed) -->
   <test thread-count="5" name="Validating user signup(failed)">
     <classes>
       <class name="Automation.SignupPageTest">
         <methods>
-          <include name="GetGmailOtp"/>
-          <include name="ValidateSignup" invocation-numbers="0"/>
+          <include name="ValidateSignup"/>
           <include name="initialise"/>
         </methods>
       </class> <!-- Automation.SignupPageTest -->
     </classes>
   </test> <!-- Validating user signup(failed) -->
+  <test thread-count="5" name="Validating Navigation bar(failed)">
+    <classes>
+      <class name="Automation.ValidateNavigationBar">
+        <methods>
+          <include name="ValidateNavigation"/>
+          <include name="teardown"/>
+          <include name="initialise"/>
+        </methods>
+      </class> <!-- Automation.ValidateNavigationBar -->
+    </classes>
+  </test> <!-- Validating Navigation bar(failed) -->
   <test thread-count="5" name="Validating title in the homepage(failed)">
     <classes>
       <class name="Automation.ValidateTitle">
         <methods>
           <include name="initialise"/>
           <include name="teardown"/>
-          <include name="Validatetitle"/>
+          <include name="Validate_Title"/>
         </methods>
       </class> <!-- Automation.ValidateTitle -->
     </classes>

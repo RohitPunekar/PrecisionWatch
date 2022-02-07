@@ -27,6 +27,8 @@ public class SignupPage extends base{
 	By otp3 = By.xpath("//*[@name='otp3']");
 	By otp4 = By.xpath("//*[@name='otp4']");
 	By submit2 = By.xpath("//*[@type='submit']");
+	By next = By.xpath("//*[@class='button btn--rounded btn-primary']");
+	By connect = By.xpath("//*[@class='button btn--rounded btn-primary page-container__footer-button']");
 
 
 	public WebElement getEmail()
@@ -87,6 +89,14 @@ public class SignupPage extends base{
 	public WebElement getSubmit2()
 	{
 		return driver.findElement(submit2);
+	}
+	public WebElement getNext()
+	{
+		return driver.findElement(next);
+	}
+	public WebElement getConnect()
+	{
+		return driver.findElement(connect);
 	}
 
 }

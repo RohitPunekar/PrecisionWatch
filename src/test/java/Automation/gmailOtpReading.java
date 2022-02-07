@@ -16,7 +16,7 @@ public class gmailOtpReading extends base {
 	{
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions option = new ChromeOptions();
-		option.setExperimentalOption("debuggerAddress", "localhost:54145");
+//		option.setExperimentalOption("debuggerAddress", "localhost:54145");
 		driver = new ChromeDriver(option);
 
 		gmailCode gc = new gmailCode(driver);
