@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.safari.SafariDriver.WindowType;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -32,7 +33,9 @@ public class SignupPageTest extends base {
 	public void initialise() throws IOException, InterruptedException
 	{
 		driver = Initialization();	
-		System.out.println("TEST2: Signup Page Test");
+		System.out.println("TEST1: Signup Page Test");
+		driver = ConnectWallet();
+		System.out.println("Wallet connected successfully");
 		driver.get(prop.getProperty("url"));
 	}
 
@@ -104,18 +107,17 @@ public class SignupPageTest extends base {
 		//			System.out.println("Third number =" + c);
 		//			char d = name111.charAt(3);
 		//			System.out.println("Fourth number =" + d);
+		Thread.sleep(3000);
 
 	}
+	
+	
 
-
-
-
-
-	//		@AfterTest
-	//		public void teardown()
-	//		{
-	//			driver.quit();
-	//		}
+			@AfterTest
+			public void teardown()
+			{
+				driver.quit();
+			}
 
 
 }

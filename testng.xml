@@ -6,15 +6,15 @@
 <listener class-name = "Automation.Listeners"/>
 </listeners>
 
-  <test thread-count="5" name="Validating user login">
-    <classes>
-      <class name="Automation.homepage"/>
-</classes>
-  </test> <!-- Test -->
-
 <test thread-count="5" name="Validating user signup">
     <classes>
       <class name="Automation.SignupPageTest"/>
+</classes>
+  </test> <!-- Test -->
+
+  <test thread-count="5" name="Validating user login">
+    <classes>
+      <class name="Automation.homepage"/>
 </classes>
   </test> <!-- Test -->
 

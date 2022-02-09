@@ -1,5 +1,7 @@
 package Automation;
 import java.io.IOException;
+import java.util.ArrayList;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -17,6 +19,10 @@ public class ValidateNavigationBar extends base{
 	{
 		driver = Initialization();
 		System.out.println("TEST3: Validate Navigation bar");
+		
+		ArrayList<String> newTb = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(newTb.get(1));
+		
 		driver.get(prop.getProperty("url"));
 	}
 

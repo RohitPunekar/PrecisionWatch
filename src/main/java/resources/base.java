@@ -21,7 +21,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class base {
 	public WebDriver driver;
 	public Properties prop;
-
+	
 	public WebDriver Initialization() throws IOException, InterruptedException 
 	{
 		FileInputStream fis = new FileInputStream(new File(".//config//file.properties"));
@@ -48,6 +48,11 @@ public class base {
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        return driver;
+	}
+	
+	public WebDriver ConnectWallet() throws InterruptedException
+	{
 		driver.get("chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html#initialize/welcome");
 		ArrayList<String> newTb = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(newTb.get(1));
@@ -64,6 +69,7 @@ public class base {
 		driver.findElement(By.xpath("//*[@data-testid='popover-close']")).click();
 		return driver;
 	}
+	
 
 	public String getScreenshotPath(String testCaseName, WebDriver driver) throws IOException
 	{

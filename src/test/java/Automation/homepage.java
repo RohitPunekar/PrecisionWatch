@@ -1,5 +1,7 @@
 package Automation;
 import java.io.IOException;
+import java.util.ArrayList;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -18,7 +20,10 @@ public class homepage extends base{
 	public void initialise() throws IOException, InterruptedException
 	{
 		driver = Initialization();	
-		System.out.println("TEST1: Login Page Test");
+		System.out.println("TEST2: Login Page Test");
+		
+		ArrayList<String> newTb = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(newTb.get(1));
 	}
 
 	@Test

@@ -16,11 +16,11 @@ public class LandingPage extends base {
 	By signin = By.xpath("//*[@type='button']");
 	By signup = By.xpath("//*[@href=\"/signup\"]");
 	
-	By title1 = By.xpath("//*[@class='sc-bYoBSM khdscJ']/img");
-	By title2 = By.xpath("//*[@class='sc-kTLmzF wjVan']/div/caption");
-	By title3 = By.xpath("//*[@class='sc-kTLmzF wjVan']/div/p");
-	By title4 = By.xpath("//*[@class='sc-kTLmzF wjVan']/div/button");
-	By title5 = By.xpath("//*[@class='sc-kTLmzF wjVan']/div/h1");
+	By title1 = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/section[1]/div[1]/div[2]/img");
+	By title2 = By.xpath("//*[@class='sc-htJRVC gxjiyA']");
+	By title3 = By.xpath("//*[@class='sc-htJRVC gxjiyA']/div/p");
+	By title4 = By.xpath("//*[@class='sc-htJRVC gxjiyA']/div/button");
+	By title5 = By.xpath("//*[@class='sc-htJRVC gxjiyA']/div/h1");
 	
 	
 	By Nav1 = By.linkText("MINT NFTs");
